@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PersonalDiary.API</name>
+    </assembly>
+    <members>
+        <member name="T:PersonalDiary.API.Controllers.PersonalDiaryController">
+            <inheritdoc />
+        </member>
+        <member name="M:PersonalDiary.API.Controllers.PersonalDiaryController.#ctor(PersonalDiary.Service.Interfaces.IPersonalDiaryServices)">
+            <inheritdoc />
+        </member>
+        <member name="M:PersonalDiary.API.Controllers.PersonalDiaryController.Add(PersonalDiary.Service.Dto.PersonalDiaryDto)">
+            <summary>
+            Add data 
+            </summary>
+            <param name="model">Object content</param>
+            <returns></returns>
+        </member>
+        <member name="M:PersonalDiary.API.Controllers.PersonalDiaryController.GetAll">
+            <summary>
+            GetAll Data
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:PersonalDiary.API.Extensions.ConfigureExensions">
+            <inheritdoc />
+        </member>
+        <member name="M:PersonalDiary.API.Extensions.ConfigureExensions.ConfigureApp(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment,Microsoft.Extensions.Configuration.IConfiguration)">
+            <inheritdoc />
+        </member>
+        <member name="T:PersonalDiary.API.Extensions.ServicesExtensions">
+            <inheritdoc />
+        </member>
+        <member name="M:PersonalDiary.API.Extensions.ServicesExtensions.RegisterServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+            <inheritdoc />
+        </member>
+        <member name="T:PersonalDiary.API.Startup">
+            <inheritdoc />
+        </member>
+        <member name="M:PersonalDiary.API.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <inheritdoc />
+        </member>
+        <member name="P:PersonalDiary.API.Startup.Configuration">
+            <inheritdoc />
+        </member>
+        <member name="M:PersonalDiary.API.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            This method gets called by the runtime. Use this method to add services to the container.
+            </summary>
+            <param name="services">Contract for service descriptors</param>
+        </member>
+        <member name="M:PersonalDiary.API.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment)">
+            <summary>
+             This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+            </summary>
+            <param name="app">Provide mechanisms to configure requests</param>
+            <param name="env">Provide information about hosting</param>
+        </member>
+    </members>
+</doc>
