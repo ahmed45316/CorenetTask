@@ -11,5 +11,6 @@ namespace PersonalDiary.Service.Interfaces
     {
         Task<ResponseResult<PersonalDiaryDto>> AddAsync(PersonalDiaryDto model);
         Task<ResponseResult<IEnumerable<PersonalDiaryDto>>> GetAllAsync();
+        bool ModifyEndedNotes(out int count);
     }
 }

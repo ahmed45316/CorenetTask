@@ -19,17 +19,17 @@ namespace PersonalDiary.API.Extensions
             if (env.IsDevelopment()) app.UseDeveloperExceptionPage();
             else app.UseHsts();
             app.UseHttpsRedirection();
+            app.UseSignalR(routes =>
+            {
+                routes.MapHub<NotifyHub>("/notify");
+            });
             app.UseMvc();
             app.SwaggerConfig(configuration);
             return app;
         }
         private static void CorsConfig(this IApplicationBuilder app)
         {
-            app.UseCors(builder => builder
-               .AllowAnyOrigin()
-               .AllowAnyMethod()
-               .AllowAnyHeader()
-               .AllowCredentials());
+            app.UseCors("CorsPolicy");
         }
         private static void SwaggerConfig(this IApplicationBuilder app, IConfiguration configuration)
         {

@@ -28,18 +28,26 @@ namespace PersonalDiary.Data.UnitOfWork
         }
         protected virtual void Dispose(bool disposing)
         {
-            if (!disposing)
+            try
             {
-                return;
-            }
+                if (!disposing)
+                {
+                    return;
+                }
 
-            if (_context == null)
+                if (_context == null)
+                {
+                    return;
+                }
+
+                _context.Dispose();
+                _context = null;
+            }
+            catch (Exception)
             {
-                return;
+                _context = null;
             }
-
-            _context.Dispose();
-            _context = null;
+           
         }
     }
 }

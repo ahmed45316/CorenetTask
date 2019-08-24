@@ -7,7 +7,7 @@
         <member name="T:PersonalDiary.API.Controllers.PersonalDiaryController">
             <inheritdoc />
         </member>
-        <member name="M:PersonalDiary.API.Controllers.PersonalDiaryController.#ctor(PersonalDiary.Service.Interfaces.IPersonalDiaryServices)">
+        <member name="M:PersonalDiary.API.Controllers.PersonalDiaryController.#ctor(PersonalDiary.Service.Interfaces.IPersonalDiaryServices,Microsoft.AspNetCore.SignalR.IHubContext{PersonalDiary.API.NotifyHub})">
             <inheritdoc />
         </member>
         <member name="M:PersonalDiary.API.Controllers.PersonalDiaryController.Add(PersonalDiary.Service.Dto.PersonalDiaryDto)">
@@ -23,6 +23,12 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:PersonalDiary.API.Controllers.PersonalDiaryController.IsNoteEnded">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:PersonalDiary.API.Extensions.ConfigureExensions">
             <inheritdoc />
         </member>
@@ -33,6 +39,9 @@
             <inheritdoc />
         </member>
         <member name="M:PersonalDiary.API.Extensions.ServicesExtensions.RegisterServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+            <inheritdoc />
+        </member>
+        <member name="T:PersonalDiary.API.NotifyHub">
             <inheritdoc />
         </member>
         <member name="T:PersonalDiary.API.Startup">

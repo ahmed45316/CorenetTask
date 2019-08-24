@@ -20,14 +20,21 @@ namespace PersonalDiary.API.Extensions
         /// <inheritdoc />
         public static IServiceCollection RegisterServices(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddCors();
+            services.AddCors(options =>
+            {
+                options.AddPolicy("CorsPolicy",
+                    builder => builder.WithOrigins("http://localhost:4200")
+                    .AllowAnyMethod()
+                    .AllowAnyHeader()
+                    .AllowCredentials());
+            });
             services.AddAutoMapper(Assembly.GetAssembly(typeof(AutoMapperConfig)));
             services.AddApiDocumentationServices(configuration);
             services.DatabaseConfig(configuration);
             services.AddTransient(typeof(IUnitOfWork<>), typeof(UnitOfWork<>));
             services.AddTransient<IPersonalDiaryServices, PersonalDiaryServices>();
             services.AddTransient<IImageServices, ImageServices>();
-            
+            services.AddSignalR();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             return services;
         }
