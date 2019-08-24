@@ -10,17 +10,15 @@ namespace PersonalDiary.Service.ReturnType
         public T Data { get; set; }
         public HttpStatusCode StatusCode { get; set; }
         public string Message { get; set; }
-        public bool? OutReturnType { get; set; }
         public ResponseResult()
         {
 
         }
-        public ResponseResult(T data, HttpStatusCode statusCode, string message, bool? outReturnType=false)
+        public ResponseResult(T data, HttpStatusCode statusCode, string message)
         {
             Data = data;
             StatusCode = statusCode;
             Message = message;
-            OutReturnType = outReturnType;
         }
     }
 }
